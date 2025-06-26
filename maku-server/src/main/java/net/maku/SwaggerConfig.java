@@ -89,14 +89,14 @@ public class SwaggerConfig {
     @Bean
     public OpenAPI openApi() {
         Contact contact = new Contact();
-        contact.setName("阿沐 babamu@126.com");
+        contact.setName("沈公子 597478495@qq.com");
 
         return new OpenAPI().info(new Info()
-                .title("Maku API")
-                .description("Maku API")
+                .title("Meet-Shine API")
+                .description("Meet-Shine API")
                 .contact(contact)
                 .version("3.x")
-                .termsOfService("https://maku.net")
+                .termsOfService("https://mi-shu.com")
         );
     }
 

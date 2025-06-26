@@ -2,10 +2,11 @@ spring:
   data:
     redis:
       database: 1
-      host: localhost
-      port: 6379
-      #password:
-      #timeout: 6000ms  # 连接超时时长（毫秒）
+      host: mishu-redis
+      port: 40002
+      password: yV7MNzrFitxka2puPZ4oH0bB6CRcqsJU
+      timeout: 6000ms  # 连接超时时长（毫秒）
+
   datasource:
     dynamic:
       hikari: # Hikari 连接池全局配置
@@ -20,7 +21,7 @@ spring:
         master:
           # MySQL8
           driver-class-name: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://mishu.com:50001/meet-shine?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
+          url: jdbc:mysql://mishu-msql:50001/meet-shine?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
           username: root
           password: kSgC6rGIQejMzXsfqYHpKPt39y2LJmZ0
           # PostgreSQL
