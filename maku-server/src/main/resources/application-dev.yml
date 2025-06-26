@@ -20,9 +20,9 @@ spring:
         master:
           # MySQL8
           driver-class-name: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://localhost:3306/maku_boot?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
-          username: maku
-          password: 123456
+          url: jdbc:mysql://117.72.10.235:50001/meet-shine?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
+          username: root
+          password: kSgC6rGIQejMzXsfqYHpKPt39y2LJmZ0
           # PostgreSQL
 #          driver-class-name: org.postgresql.Driver
 #          url: jdbc:postgresql://192.168.3.19:5432/postgres
