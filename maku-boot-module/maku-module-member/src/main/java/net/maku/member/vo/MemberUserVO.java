@@ -27,8 +27,30 @@ public class MemberUserVO implements Serializable {
     @Schema(description = "手机号")
     private String mobile;
 
-    @Schema(description = "头像")
-    private String avatar;
+    @Schema(description = "微信OpenID")
+    private String wechatOpenid;
+
+    @Schema(description = "微信UnionId")
+    private String wechatUnionid;
+
+    @Schema(description = "微信昵称")
+    private String wechatNickname;
+
+    @Schema(description = "微信头像")
+    private String wechatAvatar;
+
+    @Schema(description = "微信备注")
+    private String wechatRemark;
+
+    @JsonFormat(pattern = DateUtils.DATE_PATTERN)
+    @Schema(description = "微信绑定时间")
+    private LocalDateTime wechatBindTime;
+
+    @Schema(description = "关注：1关注, 0未关注")
+    private Integer wechatSubscribe;
+
+    @Schema(description = "区号")
+    private String region;
 
     @Schema(description = "出生日期")
     @JsonFormat(pattern = DateUtils.DATE_PATTERN)

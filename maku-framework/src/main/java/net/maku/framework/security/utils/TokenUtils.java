@@ -9,7 +9,7 @@ import net.maku.framework.common.utils.HttpContextUtils;
  * Token 工具类
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ * 
  */
 public class TokenUtils {
 

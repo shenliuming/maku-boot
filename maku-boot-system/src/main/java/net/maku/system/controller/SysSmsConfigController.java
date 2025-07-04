@@ -31,7 +31,7 @@ import java.util.Map;
  * 短信配置
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ * 
  */
 @RestController
 @RequestMapping("sys/sms/config")

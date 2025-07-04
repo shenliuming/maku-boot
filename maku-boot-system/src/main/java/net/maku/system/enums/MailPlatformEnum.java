@@ -7,7 +7,7 @@ import lombok.Getter;
  * 邮件平台枚举
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ *
  */
 @Getter
 @AllArgsConstructor

@@ -15,6 +15,7 @@
 		<module>maku-module-member</module>
         <module>maku-module-iot</module>
         <module>maku-module-websocket</module>
-    </modules>
+		<module>maku-module-yoga</module>
+	</modules>
 	
 </project>

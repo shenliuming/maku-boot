@@ -15,7 +15,7 @@ import java.util.Map;
  * webSocket 握手拦截器
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ * 
  */
 @Component
 public class UserHandshakeInterceptor implements HandshakeInterceptor {

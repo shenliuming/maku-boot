@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
  * 发送消息的对象
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ *
  */
 @Data
 @Tag(name = "发送消息的对象")

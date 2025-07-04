@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
  * 第三方登录，ThirdUserDetailsService
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ *
  */
 public interface ThirdUserDetailsService {
 

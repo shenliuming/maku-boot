@@ -10,7 +10,7 @@ import java.io.Serializable;
  * 用户头像
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ * 
  */
 @Data
 @Schema(description = "用户头像")

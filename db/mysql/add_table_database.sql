@@ -1,0 +1,72 @@
+drop table if exists t_tenants;
+-- 租户管理表
+CREATE TABLE `t_tenants`
+(
+    `id`                  bigint     NOT NULL AUTO_INCREMENT COMMENT '租户ID，主键，从10001开始递增',
+    `tenant_name`         varchar(64) NOT NULL                      COMMENT '租户名称',
+    `domain`              varchar(255) DEFAULT NULL                 COMMENT '租户独立域名',
+    `icon_url`            varchar(255) DEFAULT NULL                 COMMENT '租户icon',
+    `logo_url`            varchar(255) DEFAULT NULL                 COMMENT '租户Logo的URL',
+    `brand`               varchar(64) DEFAULT NULL                  COMMENT '租户品牌名称',
+    `email`               varchar(50) DEFAULT NULL                  COMMENT '租户邮箱',
+    `main_color`          varchar(64) DEFAULT NULL                  COMMENT '租户主题色',
+    `app_id`              varchar(64) DEFAULT NULL                  COMMENT '公众号appid',
+    `gh_id`				  varchar(64) DEFAULT NULL                  COMMENT '公众号ghid',
+    `package_id`          bigint      NOT NULL                      COMMENT '租户套餐编号',
+    `admin_name`          varchar(64) DEFAULT NULL                  COMMENT '租户管理员名称',
+    `admin_phone`         varchar(20) DEFAULT NULL                  COMMENT '租户管理员手机号',
+    `admin_password`      varchar(64) DEFAULT NULL                  COMMENT '租户管理员密码',
+    `description`         varchar(255) DEFAULT NULL                 COMMENT '租户的详细描述',
+    `data_source_configs` json       DEFAULT NULL                   COMMENT '数据源配置项',
+    `permission_configs`  json       DEFAULT NULL                   COMMENT '权限配置项',
+    `wechat_configs`      json       DEFAULT NULL                   COMMENT '微信配置项',
+    `polyv_configs`       json       DEFAULT NULL                   COMMENT '保利威配置项',
+    `payment_configs`     json       DEFAULT NULL                   COMMENT '支付配置项',
+    `sms_configs`         json       DEFAULT NULL                   COMMENT '短信配置项',
+    `shortlink_configs`   json       DEFAULT NULL                   COMMENT '短链配置项',
+    `oss_configs`         json       DEFAULT NULL                   COMMENT 'OSS配置项',
+    `extra_configs`       json       DEFAULT NULL                   COMMENT '扩展配置项',
+    `package_info`        json       DEFAULT NULL                   COMMENT '租户套餐信息',
+    `login_pic`           varchar(255) DEFAULT NULL                 COMMENT '租户公众号登录图片',
+    `login_title`         varchar(55) DEFAULT NULL                 COMMENT '租户公众号登录标题',
+    `welcome_message`     varchar(520) DEFAULT NULL                 COMMENT '租户公众号欢迎语',
+    `status`              tinyint    DEFAULT 1                      COMMENT '状态：0 - 停用, 1 - 正常',
+    `start_time`          datetime   DEFAULT NULL                    COMMENT '租户服务开始时间',
+    `end_time`            datetime   DEFAULT NULL                    COMMENT '租户服务结束时间',
+    `version`             int(10) UNSIGNED DEFAULT 1                COMMENT '版本号',
+    `deleted`             tinyint    DEFAULT 0                      COMMENT '删除标识：0 - 正常, 1 - 已删除',
+    `creator`             bigint     DEFAULT NULL                   COMMENT '创建者ID',
+    `create_time`         datetime   DEFAULT NULL                    COMMENT '创建时间',
+    `updater`             bigint     DEFAULT NULL                   COMMENT '更新者ID',
+    `update_time`         datetime   DEFAULT NULL                    COMMENT '更新时间',
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `uniq_domain` (`domain`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='多租户配置表，包含所有租户相关的配置项';
+
+ALTER TABLE t_tenants AUTO_INCREMENT = 10000;
+
+
+CREATE TABLE `member_user` (
+   `id` bigint NOT NULL AUTO_INCREMENT COMMENT 'id',
+   `nick_name` varchar(100) NOT NULL COMMENT '昵称',
+   `mobile` varchar(20) NOT NULL COMMENT '手机号',
+   `wechat_openid` varchar(64)  DEFAULT NULL COMMENT 'openid',
+   `wechat_unionid` varchar(64)  DEFAULT NULL COMMENT 'unionid',
+   `wechat_nickname` varchar(50)  DEFAULT NULL COMMENT '昵称',
+   `wechat_avatar` varchar(255)  DEFAULT NULL COMMENT '头像',
+   `wechat_remark` varchar(200)  DEFAULT NULL COMMENT '备注',
+   `wechat_bind_time` datetime DEFAULT NULL COMMENT '微信账号绑定时间',
+   `wechat_subscribe` tinyint NOT NULL DEFAULT '0' COMMENT '关注：1关注, 0未关注',
+   `region` varchar(64)  DEFAULT NULL COMMENT '手机号区号',
+   `birthday` date DEFAULT NULL COMMENT '出生日期',
+   `gender` tinyint DEFAULT NULL COMMENT '性别   0：男   1：女   2：未知',
+   `last_login_ip` varchar(100) DEFAULT NULL COMMENT '最后登录IP',
+   `last_login_time` datetime DEFAULT NULL COMMENT '最后登录时间',
+   `tenant_id` bigint DEFAULT NULL COMMENT '租户ID',
+   `remark` varchar(500) DEFAULT NULL COMMENT '备注',
+   `status` tinyint DEFAULT NULL COMMENT '状态  0：禁用   1：启用',
+   `version` int DEFAULT NULL COMMENT '版本号',
+   `deleted` tinyint DEFAULT NULL COMMENT '删除标识  0：正常   1：已删除',
+   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='会员管理';

@@ -16,7 +16,7 @@ import org.springframework.web.servlet.resource.NoResourceFoundException;
  * 异常处理器
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ *
  */
 @Slf4j
 @RestControllerAdvice

@@ -60,6 +60,17 @@ public class SwaggerConfig {
     }
 
     @Bean
+    public GroupedOpenApi yogaApi() {
+        String[] paths = {"/**"};
+        String[] packagedToMatch = {"net.maku.yoga"};
+        return GroupedOpenApi.builder()
+                .group("7")
+                .displayName("yoga API")
+                .pathsToMatch(paths)
+                .packagesToScan(packagedToMatch).build();
+    }
+
+    @Bean
     public GroupedOpenApi iotApi() {
         String[] paths = {"/**"};
         String[] packagedToMatch = {"net.maku.iot"};
@@ -80,7 +91,7 @@ public class SwaggerConfig {
                 .pathsToMatch(paths)
                 .packagesToExclude(
                         "net.maku.system", "net.maku.quartz", "net.maku.monitor", "net.maku.member", "net.maku.iot",
-                        "net.maku.generator"
+                        "net.maku.generator", "net.maku.yoga"
                 )
                 .packagesToScan(packagedToMatch)
                 .build();

@@ -19,7 +19,7 @@ import org.springframework.util.Assert;
  * 第三方登录 AuthenticationProvider
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ * 
  */
 public class ThirdAuthenticationProvider implements AuthenticationProvider, InitializingBean, MessageSourceAware {
     protected MessageSourceAccessor messages = SpringSecurityMessageSource.getAccessor();

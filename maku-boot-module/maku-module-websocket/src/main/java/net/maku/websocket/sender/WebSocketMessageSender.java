@@ -15,7 +15,7 @@ import java.util.List;
  * WebSocket 消息发送
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ *
  */
 @Slf4j
 @Component

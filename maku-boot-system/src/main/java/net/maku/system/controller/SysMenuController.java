@@ -25,7 +25,7 @@ import java.util.Set;
  * 菜单管理
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ *
  */
 @RestController
 @RequestMapping("sys/menu")

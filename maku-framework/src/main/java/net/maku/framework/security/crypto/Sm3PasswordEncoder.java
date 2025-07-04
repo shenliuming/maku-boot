@@ -8,7 +8,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  * 采用国密SM3加密算法，对系统密码进行加密
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ * 
  */
 public class Sm3PasswordEncoder implements PasswordEncoder {
     @Override

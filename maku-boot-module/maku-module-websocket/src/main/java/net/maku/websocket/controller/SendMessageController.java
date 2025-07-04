@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
  * 测试 发送消息
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ *
  */
 @Tag(name = "WebSocket，发送消息")
 @AllArgsConstructor

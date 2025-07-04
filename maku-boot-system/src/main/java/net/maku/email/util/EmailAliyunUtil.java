@@ -12,7 +12,7 @@ import net.maku.framework.common.exception.ServerException;
  * 阿里云 邮件发送
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ *
  */
 @Slf4j
 public class EmailAliyunUtil {

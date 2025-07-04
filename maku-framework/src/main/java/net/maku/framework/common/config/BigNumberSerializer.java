@@ -11,7 +11,7 @@ import java.io.IOException;
  * 解决js精度丢失问题
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ * 
  */
 @JacksonStdImpl
 public class BigNumberSerializer extends NumberSerializer {

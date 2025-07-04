@@ -38,7 +38,7 @@ import java.util.stream.IntStream;
  * 操作日志，切面处理类
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ *
  */
 @Aspect
 @Component

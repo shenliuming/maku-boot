@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
  * SpringSecurity @PreAuthorize 注解 权限标识
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ *
  */
 public class PreAuthorizeUtil {
 

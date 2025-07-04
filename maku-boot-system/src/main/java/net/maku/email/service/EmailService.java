@@ -27,7 +27,7 @@ import java.util.List;
  * 邮件服务
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ * 
  */
 @Slf4j
 @Service

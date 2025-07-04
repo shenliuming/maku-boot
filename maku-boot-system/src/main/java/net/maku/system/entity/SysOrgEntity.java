@@ -11,7 +11,7 @@ import net.maku.framework.mybatis.entity.BaseEntity;
  * 机构管理
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ * 
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

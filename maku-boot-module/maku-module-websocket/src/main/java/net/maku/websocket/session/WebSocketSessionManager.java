@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentMap;
  * WebSocket 会话管理器
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ *
  */
 @Component
 public class WebSocketSessionManager {

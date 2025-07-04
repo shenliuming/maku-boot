@@ -12,7 +12,7 @@ import java.io.Serializable;
  * 用户基本信息
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ * 
  */
 @Data
 @Schema(description = "用户基本信息")

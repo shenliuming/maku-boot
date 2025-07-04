@@ -32,9 +32,44 @@ public class MemberUserEntity {
     private String mobile;
 
     /**
-     * 头像
+     *  微信OpenID
      */
-    private String avatar;
+    private String wechatOpenid;
+
+    /**
+     * 微信UnionID
+     */
+    private String wechatUnionid;
+
+    /**
+     * 微信昵称
+     */
+    private String wechatNickname;
+
+    /**
+     * 微信头像
+     */
+    private String wechatAvatar;
+
+    /**
+     * 微信备注
+     */
+    private String wechatRemark;
+
+    /**
+     * 微信绑定时间
+     */
+    private LocalDateTime wechatBindTime;
+
+    /**
+     * 关注：1关注, 0未关注
+     */
+    private Integer wechatSubscribe;
+
+    /**
+     * 电话区号
+     */
+    private String region;
 
     /**
      * 出生日期
@@ -45,11 +80,6 @@ public class MemberUserEntity {
      * 性别
      */
     private Integer gender;
-
-    /**
-     * 第三方平台，唯一标识
-     */
-    private String openid;
 
     /**
      * 最后登录IP

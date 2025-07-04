@@ -12,7 +12,7 @@ import java.io.File;
  * 本地 邮件发送
  *
  * @author 阿沐 babamu@126.com
- * <a href="https://maku.net">MAKU</a>
+ * 
  */
 @Slf4j
 public class EmailLocalUtil {
