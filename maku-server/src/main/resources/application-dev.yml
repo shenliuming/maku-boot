@@ -21,7 +21,7 @@ spring:
         master:
           # MySQL8
           driver-class-name: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://mishu-msql:50001/meet-shine?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
+          url: jdbc:mysql://mishu-msql:50001/migacloud?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
           username: root
           password: kSgC6rGIQejMzXsfqYHpKPt39y2LJmZ0
           # PostgreSQL
@@ -45,8 +45,8 @@ logging:
 wx:
   miniapp:
     configs:
-      - appid: #微信小程序的appid
-        secret: #微信小程序的Secret
+      - appid: wx818d003aacd3f96b #微信小程序的appid
+        secret: 130a5f8526022d15b66ea75ef18794f0 #微信小程序的Secret
         token: #微信小程序消息服务器配置的token
         aesKey: #微信小程序消息服务器配置的EncodingAESKey
         msgDataFormat: JSON

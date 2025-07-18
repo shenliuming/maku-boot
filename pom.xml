@@ -59,6 +59,7 @@
         <tencentcloud.sdk.ses.version>3.1.944</tencentcloud.sdk.ses.version>
         <mail.version>1.6.2</mail.version>
         <spring-integration-mqtt.version>5.5.6</spring-integration-mqtt.version>
+        <weixin-java-miniapp.version>4.7.0</weixin-java-miniapp.version>
     </properties>
 
     <dependencies>
@@ -228,6 +229,16 @@
                 <groupId>org.springframework.integration</groupId>
                 <artifactId>spring-integration-mqtt</artifactId>
                 <version>${spring-integration-mqtt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>
+                <version>3.4.5</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.binarywang</groupId>
+                <artifactId>weixin-java-miniapp</artifactId>
+                <version>${weixin-java-miniapp.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

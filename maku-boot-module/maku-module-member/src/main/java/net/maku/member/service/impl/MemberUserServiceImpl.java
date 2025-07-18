@@ -60,4 +60,14 @@ public class MemberUserServiceImpl extends BaseServiceImpl<MemberUserDao, Member
         removeByIds(idList);
     }
 
+    @Override
+    public MemberUserVO getByOpenid(String openid) {
+        MemberUserEntity entity = baseMapper.selectOne(new LambdaQueryWrapper<MemberUserEntity>()
+                .eq(MemberUserEntity::getWechatOpenid, openid));
+        if (entity != null) {
+            return MemberUserConvert.INSTANCE.convert(entity);
+        }
+        return null;
+    }
+
 }

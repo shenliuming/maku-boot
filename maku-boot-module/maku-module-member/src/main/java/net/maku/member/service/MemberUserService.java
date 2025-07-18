@@ -22,4 +22,6 @@ public interface MemberUserService extends BaseService<MemberUserEntity> {
     void update(MemberUserVO vo);
 
     void delete(List<Long> idList);
+
+    MemberUserVO getByOpenid(String openid);
 }

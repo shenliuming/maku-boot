@@ -12,3 +12,4 @@ auth:
     - /upload/**
     - /
     - /yoga/**
+    - /wx/user/**

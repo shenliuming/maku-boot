@@ -28,7 +28,7 @@ public class WxMaUserController {
     private final WxMaService wxMaService;
 
     /**
-     * 登陆接口
+     * 小程序用户登录接口
      */
     @GetMapping("/login")
     public String login(@PathVariable String appid, String code) {
@@ -45,6 +45,9 @@ public class WxMaUserController {
             log.info(session.getSessionKey());
             log.info(session.getOpenid());
             //TODO 可以增加自己的逻辑，关联业务相关数据
+
+
+
             return JsonUtils.toJson(session);
         } catch (WxErrorException e) {
             log.error(e.getMessage(), e);
