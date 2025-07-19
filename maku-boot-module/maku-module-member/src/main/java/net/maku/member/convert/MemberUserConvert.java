@@ -1,6 +1,7 @@
 package net.maku.member.convert;
 
 import net.maku.member.entity.MemberUserEntity;
+import net.maku.member.vo.MemberDetail;
 import net.maku.member.vo.MemberUserVO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
@@ -22,4 +23,5 @@ public interface MemberUserConvert {
 
     List<MemberUserVO> convertList(List<MemberUserEntity> list);
 
+    MemberDetail convertMemberDetail(MemberUserEntity entity);
 }

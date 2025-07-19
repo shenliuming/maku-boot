@@ -54,3 +54,14 @@ CREATE TABLE `yoga_booking` (
                              `create_time` DATETIME DEFAULT CURRENT_TIMESTAMP,
                              UNIQUE KEY `uniq_member_schedule` (`member_id`, `schedule_id`)-- 防止重复预约
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT '预约记录表';
+
+-- 7. 首页banner
+CREATE TABLE `yoga_banner` (
+                               `id` BIGINT AUTO_INCREMENT PRIMARY KEY COMMENT '老师ID',
+                               `title` VARCHAR(255) NOT NULL COMMENT '图片标题',
+                               `image_url` VARCHAR(15) NOT NULL COMMENT '图片URL',
+                               `sort`  INT NOT NULL DEFAULT 0 COMMENT '排序值（越大越靠前）',
+                               `status` TINYINT DEFAULT 1 COMMENT '状态 0:停用 1:启用',
+                               `click_link` VARCHAR(255) DEFAULT NULL COMMENT '点击跳转链接',
+                               `create_time` DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT '首页banner';
