@@ -1,5 +1,6 @@
 package net.maku.yoga.entity;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import com.baomidou.mybatisplus.annotation.*;
@@ -27,6 +28,12 @@ public class YogaBannerEntity {
 	*/
 	@TableField(value = "title")
 	private String title;
+
+	/**
+	* 图片描述
+	*/
+	@TableField(value = "description")
+	private String description;
 
 	/**
 	* 图片URL

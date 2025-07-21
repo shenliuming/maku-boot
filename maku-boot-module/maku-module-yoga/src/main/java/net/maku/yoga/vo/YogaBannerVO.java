@@ -23,6 +23,9 @@ public class YogaBannerVO {
 	@Schema(description = "图片标题")
 	private String title;
 
+	@Schema(description = "图片描述")
+	private String description;
+
 	@Schema(description = "图片URL")
 	private String imageUrl;
 

@@ -31,7 +31,7 @@ public class YogaBannerController {
 
     @GetMapping("page")
     @Operation(summary = "分页")
-    @PreAuthorize("hasAuthority('yoga:banner')")
+//    @PreAuthorize("hasAuthority('yoga:banner')")
     public Result<PageResult<YogaBannerVO>> page(@ParameterObject @Valid YogaBannerQuery query){
         PageResult<YogaBannerVO> page = yogaBannerService.page(query);
 

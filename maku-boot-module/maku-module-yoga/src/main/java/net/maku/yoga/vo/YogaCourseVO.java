@@ -2,6 +2,8 @@ package net.maku.yoga.vo;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.math.BigDecimal;
 import java.util.List;
 import lombok.Data;
 import java.io.Serializable;
@@ -31,6 +33,15 @@ public class YogaCourseVO {
 
 	@Schema(description = "状态 0:禁用 1:启用")
 	private Integer status;
+
+	@Schema(description = "价格")
+	private BigDecimal price;
+
+	@Schema(description = "课程简介")
+	private String introduction;
+
+	@Schema(description = "课程封面")
+	private String cover;
 
 	@Schema(description = "版本号")
 	private Integer version;

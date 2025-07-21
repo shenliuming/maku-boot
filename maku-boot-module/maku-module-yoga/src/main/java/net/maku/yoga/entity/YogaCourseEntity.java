@@ -1,8 +1,11 @@
 package net.maku.yoga.entity;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import com.baomidou.mybatisplus.annotation.*;
+
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
@@ -39,6 +42,24 @@ public class YogaCourseEntity {
 	*/
 	@TableField(value = "duration")
 	private Integer duration;
+
+	/**
+	* 价格
+	*/
+	@TableField(value = "price")
+	private BigDecimal price;
+
+	/**
+	 * 课程简介
+	 */
+	@TableField(value = "introduction")
+	private String introduction;
+
+	/**
+	 * 课程封面
+	 */
+	@TableField(value = "cover")
+	private String cover;
 
 	/**
 	* 状态 0:禁用 1:启用

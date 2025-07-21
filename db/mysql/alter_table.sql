@@ -5,6 +5,8 @@ CREATE TABLE `yoga_teacher` (
                              `phone` VARCHAR(15) NOT NULL COMMENT '手机号',
                              `avatar` VARCHAR(255) DEFAULT NULL COMMENT '头像',
                              `member_id` BIGINT DEFAULT NULL COMMENT '关联会员ID',
+                             `subject` VARCHAR(55) DEFAULT NULL COMMENT '主修科目',
+                             `introduction` JSON DEFAULT NULL COMMENT '老师的个人介绍',
                              `status` TINYINT DEFAULT 1 COMMENT '状态 0:离职 1:在职',
                              `create_time` DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
                              INDEX `idx_member` (`member_id`)
@@ -15,7 +17,10 @@ CREATE TABLE `yoga_course` (
                             `id` BIGINT AUTO_INCREMENT PRIMARY KEY COMMENT '课程ID',
                             `name` VARCHAR(50) NOT NULL COMMENT '课程名称',
                             `type` TINYINT NOT NULL COMMENT '1-私教 2-小班 3-团课 4-精品课',
-                            `duration` SMALLINT NOT NULL COMMENT '时长(分钟)',
+                            `price` DECIMAL(10, 2) NOT NULL DEFAULT 888.88 COMMENT '价格',
+                            `introduction` TEXT COMMENT '课程简介',
+                            `cover` VARCHAR(255) DEFAULT NULL COMMENT '课程封面',
+                            `duration` SMALLINT DEFAULT 60 COMMENT '时长(分钟)',
                             `status` TINYINT DEFAULT 1 COMMENT '状态 0:禁用 1:启用',
                             `version` INT DEFAULT 0 COMMENT '版本号',
                             `deleted` TINYINT DEFAULT 0 COMMENT '删除标识 0:正常 1:已删除',
@@ -57,8 +62,9 @@ CREATE TABLE `yoga_booking` (
 
 -- 7. 首页banner
 CREATE TABLE `yoga_banner` (
-                               `id` BIGINT AUTO_INCREMENT PRIMARY KEY COMMENT '老师ID',
+                               `id` BIGINT AUTO_INCREMENT PRIMARY KEY COMMENT 'bannerID',
                                `title` VARCHAR(255) NOT NULL COMMENT '图片标题',
+                               `desc`  VARCHAR(255) NOT NULL COMMENT '图片描述',
                                `image_url` VARCHAR(15) NOT NULL COMMENT '图片URL',
                                `sort`  INT NOT NULL DEFAULT 0 COMMENT '排序值（越大越靠前）',
                                `status` TINYINT DEFAULT 1 COMMENT '状态 0:停用 1:启用',

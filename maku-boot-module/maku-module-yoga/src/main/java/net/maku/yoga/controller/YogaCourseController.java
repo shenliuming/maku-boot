@@ -31,7 +31,7 @@ public class YogaCourseController {
 
     @GetMapping("page")
     @Operation(summary = "分页")
-    @PreAuthorize("hasAuthority('yoga:course')")
+//    @PreAuthorize("hasAuthority('yoga:course')")
     public Result<PageResult<YogaCourseVO>> page(@ParameterObject @Valid YogaCourseQuery query){
         PageResult<YogaCourseVO> page = yogaCourseService.page(query);
 

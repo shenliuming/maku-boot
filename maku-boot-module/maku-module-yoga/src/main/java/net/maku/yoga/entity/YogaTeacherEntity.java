@@ -47,6 +47,16 @@ public class YogaTeacherEntity {
 	private Long memberId;
 
 	/**
+	* 主修科目
+	*/
+ 	private String subject;
+
+	/**
+	 * 个人介绍
+ 	 */
+	private String introduction;
+
+	/**
 	* 状态 0:离职 1:在职
 	*/
 	@TableField(value = "status")

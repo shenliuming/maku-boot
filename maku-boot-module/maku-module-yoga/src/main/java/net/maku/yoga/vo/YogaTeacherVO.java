@@ -29,6 +29,13 @@ public class YogaTeacherVO {
 	@Schema(description = "头像")
 	private String avatar;
 
+	@Schema(description = "主修科目")
+	private String subject;
+
+	@Schema(description = "个人介绍")
+	private String introduction;
+
+
 	@Schema(description = "关联会员ID")
 	private Long memberId;
 
